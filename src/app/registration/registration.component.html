@@ -1,0 +1,40 @@
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" class="form-control" formControlName="FullName" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" class="form-control" formControlName="UserName" placeholder="Enter your username" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" class="form-control" formControlName="Email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" class="form-control" formControlName="Number" placeholder="Enter your number" required>
+          </div>
+          <div class="input-box">
+            <span class="details" id="password">Password</span>
+            <input type="text" class="form-control" formControlName="Password" placeholder="Enter your password" required>
+          </div>
+          <div class="input-box">
+            <span class="details" id="password">Confirm Password</span>
+            <input type="text" class="form-control" formControlName="ConfirmPassword" placeholder="Confirm your password" required>
+          </div>
+        </div>
+
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+        <div class="button">
+          <input type="submit" routerLink="/login" value="Already have an account? Login!">
+        </div>
+      </form>
+    </div>
+  </div>

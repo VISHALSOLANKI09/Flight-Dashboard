@@ -1,0 +1,90 @@
+<div class="body">
+    <div class="container">
+        <h5>Sort By</h5>
+        <div class="card-table">
+            <div class="flight-properties">
+                <div class="table table-responsive flight-card" style="padding-bottom: 20px;">
+                    <thead class="flight-card">
+                        <tr>
+                            <th style="padding-left: 80px;">DEPARTURE</th>
+                            <th style="padding-left: 105px;">DURATION</th>
+                            <th style="padding-left: 150px;">ARRIVAL</th>
+                            <th style="padding-left: 300px; padding-right: 120px;">PRICE
+                                <svg class="arrow" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/>
+                                </svg>
+                            </th>
+                        </tr>
+                    </thead>
+                    <!-- <tbody> -->
+                        <div *ngFor="let flight of data" class="flight-card">
+                            <div class="dF">
+                                <div class="cardLeft">
+                                    <div class="flexCol">
+                                        <div class="dF" style="align-items: center">
+                                            <img src="{{ flight.IMAGE }}">
+                                            <span class="flightName">{{ flight.company }}</span>
+                                        </div>
+                                        <div class="dF desc">
+                                            <div class="flexCol destination">
+                                                <div class="font12 grey">
+                                                    <span class="textUpper fb">DEL </span>
+                                                    <span>{{ flight.FROM }}</span>
+                                                    <span>, India</span>
+                                                </div>
+                                                <span class="fb pd10">{{ flight.TAKEOFF_TIME }}</span>
+                                            </div>
+
+                                            <div class="flexCol" style="align-items: center; width: 33%;">
+                                                <span>&nbsp;</span>
+                                                <span class="pd10 fb TT">{{ flight.Time }}</span>
+                                            </div>
+
+                                            <div style="width: 11%;"></div>
+
+                                            <div class="flexCol arrivalTime">
+                                                <div class="font12 grey truncate">
+                                                    <span class="textUpper fb">BOM </span>
+                                                    <span>Mumbai</span>
+                                                    <span>, India</span>
+                                                </div>
+                                                <span class="fb pd10">{{ flight.LANDING_TIME }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cardRight contentEnd dF">
+                                    <div class="flexCol contentEnd pd10" style="width: 100%;">
+                                        <div class="flexCol arrival alignItemsEnd">
+                                            <div>
+                                                <span class="price">{{ flight.PRICE }}</span>
+                                            </div>
+                                            <span class="pd10" style="font-size: 14px;">{{ flight.EMI }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="alignItemsEnd contentCenter pb5 flexCol button">
+                                        <div class="width100 flexCol">
+                                            <p class="span">&nbsp;</p>
+                                            <button class="alignItemsCenter contentCenter textUpper dF btn">Book</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dF justifyBetween alignItemsEnd" style="width: 100%">
+                                <div class="dF alignItemsCenter refund">Partially Refundable</div>
+                                <div class>
+                                    <a class="dF fr link">
+                                        <span class="fb pb5 font11">Flight Details</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="1rem" height="1rem" class="arrowDown">
+                                            <path d="M16 25.6L0 10.237l4.575-3.838L16 17.924 27.425 6.399 32 10.237 16 25.6z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </tbody> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

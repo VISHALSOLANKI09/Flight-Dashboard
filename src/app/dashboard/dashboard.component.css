@@ -1,0 +1,206 @@
+
+
+/* .card{
+    height: 60vh;
+    margin: 25px;
+    padding: 25px;
+} */
+
+/* .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+} */
+
+
+.container {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.card-table {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    /* border: 1px solid rgba(0, 0, 0, 0.2); */
+    /* border-radius: .25rem; */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.center .btn {
+    font-size: 14px !important;
+    margin-top: 20px !important;
+    font-weight: 400;
+    padding: 12px 72px;
+    border-radius: 3px !important;
+}
+
+.table {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.flight-card {
+    margin-top: 30px;
+    width: auto;
+    border-radius: 0.5rem;
+    box-shadow: rgb(0 0 0 / 13%) 0px 2px 4px 0px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+.dF {
+    display: flex;
+    width: 100%;
+    padding: 0px 2rem;  
+}
+
+.cardLeft {
+    width: 62%;
+}
+
+.flexCol {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+img {
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+    /* background-color: 100% 100%; */
+    margin-right: 0.5rem;
+}
+
+.desc {
+    line-height: 1;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    width: 100%;
+    align-items: flex-end;
+}
+
+.destination {
+    width: 33%;
+}
+
+.font-12 {
+    line-height: inherit;
+}
+
+.grey {
+    color: rgba(142, 147, 171);
+}
+
+.textUpper {
+    text-transform: uppercase;
+}
+
+.fb {
+    font-weight: 700;
+    font-style: normal;
+}
+
+.pd10 {
+    padding-top: 10px;
+}
+
+.arrivalTime {
+    width: 34%;
+}
+
+.cardRight {
+    width: 38%;
+}
+
+.contentEnd {
+    justify-content: flex-end;
+}
+
+
+.pb5 {
+    padding-bottom: 5px;
+}
+
+.pb15 {
+    padding-bottom: 20px;
+}
+
+.price {
+    font-weight: 700;
+}
+
+.alignItemsEnd {
+    align-items: flex-end;
+}
+
+.arrival{
+    width: 100%;
+}
+
+.button {
+    width: 50%;
+    margin-left: 40px;
+}
+a {
+    cursor: pointer;
+}
+.btn {
+    background-color: rgb(255, 109, 56);
+    border-radius: 0.5rem;
+    outline: none;
+    color: rgba(255, 255, 255);
+    border: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    width: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.justifyBetween {
+    padding: .2rem 2rem 1rem;
+    color: rgb(100, 122, 151);
+    font-size: 11px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.alignItemsCenter {
+    align-items: center;
+}
+
+.fr {
+    float: right;
+}
+
+.arrowDown {
+    width: 1rem;
+    height: .8rem;
+    fill: rgb(34, 118, 227);
+    cursor: pointer;
+}
+.link {
+    width: 120%;
+    padding-top: 0px;
+}
+
+.refund {
+    font-size: 13px;
+}
+
+.arrow {
+    fill: rgb(34, 118, 227);
+}
