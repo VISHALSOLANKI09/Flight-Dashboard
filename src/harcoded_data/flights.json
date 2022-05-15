@@ -1,0 +1,33 @@
+[{
+    "company": "Vistara",
+    "FROM": "New Delhi",
+    "TO": "Mumbai",
+    "Time": "2h 20m",
+    "TAKEOFF_TIME": "17:45",
+    "LANDING_TIME": "20:05",
+    "PRICE": "₹6,253",
+    "EMI": "No Cost EMI from ₹2,085",
+    "IsREFUNDABLE": "Partially Refundable"
+},
+{
+    "company": "Spicejet",
+    "FROM": "New Delhi",
+    "TO": "Mumbai",
+    "Time": "2h 15m",
+    "TAKEOFF_TIME": "18:35",
+    "LANDING_TIME": "20:50",
+    "PRICE": "₹7,776",
+    "EMI": "No Cost EMI from ₹2,592",
+    "IsREFUNDABLE": "Partially Refundable"
+},
+{
+    "company": "Spicejet",
+    "FROM": "New Delhi",
+    "TO": "Mumbai",
+    "Time": "2h 20m",
+    "TAKEOFF_TIME": "17:45",
+    "LANDING_TIME": "20:05",
+    "PRICE": "₹7,776",
+    "EMI": "No Cost EMI from ₹2,592",
+    "IsREFUNDABLE": "Partially Refundable"
+}]

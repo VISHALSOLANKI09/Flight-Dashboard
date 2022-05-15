@@ -1,0 +1,35 @@
+<div class="container" id="htmlContent">
+    <div class="booked">
+        <div class="dF">
+            <img src="https://icon-library.com/images/green-tick-icon/green-tick-icon-26.jpg" alt="">
+            <h1>Flight Booked</h1>
+        </div>
+        <div class="flightData">
+            <h2>{{ bookedFlight.company }}</h2>
+            <h2>From: {{ bookedFlight.FROM }}</h2>
+            <h2>To: {{ bookedFlight.TO }}</h2>
+            <h2>At {{ bookedFlight.TAKEOFF_TIME }}</h2>
+            <h2>The duration of your flight is {{ bookedFlight.Time }}</h2>
+            <!-- <button id="generatePDF">Generate PDF</button> -->
+        </div>
+    </div>
+    
+</div>
+<script ype="text/javascript">
+
+    var doc = new jsPDF();
+    var specialElementHandlers = {
+        '#editor': function(element , renderer) {
+            return true;
+        }
+    }
+
+    $("#generatePDF").click(function() {
+        doc.fromHTML($('htmlContent').html(), 15, 15, {
+            'width': 700,
+            'elementHandlers': specialElementHandlers
+        });
+        doc.save('Flight_Ticket.pdf');
+    });
+    console.log("111");
+</script>

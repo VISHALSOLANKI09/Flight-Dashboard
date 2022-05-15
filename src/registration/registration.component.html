@@ -1,0 +1,77 @@
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" class="form-control" formControlName="FullName" placeholder="Enter your name" required>
+            <span class="text-danger"    
+                  *ngIf="registrationFormControl['FullName'].errors?.['required'] && submitted">    
+                   Name is required    
+            </span>
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" class="form-control" formControlName="UserName" placeholder="Enter your username" required>
+            <span class="text-danger"    
+                  *ngIf="registrationFormControl['UserName'].errors?.['required'] && submitted">    
+                    UserName is required    
+            </span>
+            <span class="text-danger"
+                  *ngIf="userNameAlreadyTaken && submitted">
+                  User Name is already taken
+            </span>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" class="form-control" formControlName="Email" placeholder="Enter your email" required>
+            <span class="text-danger"    
+                  *ngIf="registrationFormControl['Email'].errors?.['required'] && submitted">    
+                  Email is required    
+            </span>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" class="form-control" formControlName="Number" placeholder="Enter your number" required>
+            <span class="text-danger"    
+                  *ngIf="registrationFormControl['Number'].errors?.['required'] && submitted">    
+                  Number is required    
+            </span>
+          </div>
+          <div class="input-box">
+            <span class="details" id="password">Password</span>
+            <input type="password" class="form-control" formControlName="Password" placeholder="Enter your password" required>
+            <span class="text-danger"    
+                  *ngIf="registrationFormControl['Password'].errors?.['required'] && submitted">    
+                  Password is required    
+            </span>
+            <span class="text-danger"    
+                  *ngIf="registrationFormControl['Password'].errors?.['invalidPassword']">    
+                  Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase
+                                letter and 1 number   
+            </span>
+          </div>
+          <div class="input-box">
+            <span class="details" id="password">Confirm Password</span>
+            <input type="password" class="form-control" formControlName="ConfirmPassword" placeholder="Confirm your password" required>
+            <span class="text-danger"    
+                  *ngIf="registrationFormControl['ConfirmPassword'].errors?.['required'] && submitted">    
+                  ConfirmPassword is required    
+            </span>
+            <span class="text-danger"
+                  *ngIf="registrationFormControl['ConfirmPassword'].errors?.['passwordMismatch']">
+                  Passwords does not match
+            </span>
+          </div>
+        </div>
+
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+        <div class="button">
+          <input type="submit" routerLink="/login" value="Already have an account? Login!">
+        </div>
+      </form>
+    </div>
+  </div>

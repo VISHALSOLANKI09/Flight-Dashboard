@@ -1,0 +1,105 @@
+<div class="body">
+    <div class="container">
+        <h5>Sort By: Time and Duration</h5>
+        <div class="card-table">
+            <div class="flight-properties">
+                <div class="table table-responsive flight-card" style="padding-bottom: 20px;">
+                    <thead class="flight-card">
+                        <tr>
+                            <th style="padding-left: 85px;">DEPARTURE</th>
+                            <th (click)=sortDuration() style="padding-left: 85px; padding-right: 10px; cursor: pointer">DURATION
+                                <svg *ngIf="!isAscendingTIME" class="arrow" width="24" height="34" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path d="M14.496 5.975l-.001 14.287-6.366-6.367L6 16.021l10.003 10.004L26 16.029 23.871 13.9l-6.366 6.368V5.977z"/>
+                                </svg>
+                                <svg *ngIf="isAscendingTIME" class="upArrow" width="24" height="34" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path d="M17.504 26.025l.001-14.287 6.366 6.367L26 15.979 15.997 5.975 6 15.971 8.129 18.1l6.366-6.368v14.291z"/>
+                                </svg>
+                            </th>
+                            <th style="padding-left: 150px;">ARRIVAL</th>
+                            <th (click)=sortPrice() style="padding-left: 200px; padding-right: 200px; cursor: pointer;">PRICE
+                                <svg *ngIf="!isAscendingPRICE" class="arrow" width="24" height="34" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path d="M14.496 5.975l-.001 14.287-6.366-6.367L6 16.021l10.003 10.004L26 16.029 23.871 13.9l-6.366 6.368V5.977z"/>
+                                </svg>
+                                <svg *ngIf="isAscendingPRICE" class="upArrow" width="24" height="34" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path d="M17.504 26.025l.001-14.287 6.366 6.367L26 15.979 15.997 5.975 6 15.971 8.129 18.1l6.366-6.368v14.291z"/>
+                                </svg>
+                            </th>
+                        </tr>
+                    </thead>
+                    <!-- <tbody> -->
+                        <!-- Starting of the different flights -->
+                        <div *ngFor="let flight of data" class="flight-card">
+                            <div class="dF">
+                                <div class="cardLeft">
+                                    <div class="flexCol">
+                                        <div class="dF" style="align-items: center">
+                                            <img src="{{ flight.IMAGE }}">
+                                            <span class="flightName">{{ flight.company }}</span>
+                                        </div>
+                                        <div class="dF desc">
+                                            <div class="flexCol destination">
+                                                <div class="font12 grey">
+                                                    <span class="textUpper fb">DEL </span>
+                                                    <span>{{ flight.FROM }}</span>
+                                                    <span>, India</span>
+                                                </div>
+                                                <span class="fb pd10">{{ flight.TAKEOFF_TIME }}</span>
+                                            </div>
+
+                                            <div class="flexCol" style="align-items: center; width: 33%;">
+                                                <span>&nbsp;</span>
+                                                <span class="pd10 fb TT">{{ flight.Time }}</span>
+                                            </div>
+
+                                            <div style="width: 11%;"></div>
+
+                                            <div class="flexCol arrivalTime">
+                                                <div class="font12 grey truncate">
+                                                    <span class="textUpper fb">BOM </span>
+                                                    <span>Mumbai</span>
+                                                    <span>, India</span>
+                                                </div>
+                                                <span class="fb pd10">{{ flight.LANDING_TIME }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cardRight contentEnd dF">
+                                    <div class="flexCol contentEnd pd10" style="width: 100%;">
+                                        <div class="flexCol arrival alignItemsEnd">
+                                            <div>
+                                                <span class="price">{{ flight.PRICE }}</span>
+                                            </div>
+                                            <span class="pd10" style="font-size: 14px;">{{ flight.EMI }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="alignItemsEnd contentCenter pb5 flexCol button">
+                                        <div class="width100 flexCol">
+                                            <p class="span">&nbsp;</p>
+                                            <button value="flight" (click)=book(flight) class="alignItemsCenter contentCenter textUpper dF btn">Book</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dF justifyBetween alignItemsEnd" style="width: 100%">
+                                <div class="dF alignItemsCenter refund">Partially Refundable</div>
+                                <div class>
+                                    <a class="dF fr link">
+                                        <span type="button" (click) = showDetails(flight) class="fb pb5 font11">Flight Details</span>
+                                        <div id="confirm">
+                                            <div class="message">This is a warning message.</div>
+                                               <button class="yes">OK</button>
+                                            </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="1rem" height="1rem" class="arrowDown">
+                                            <path d="M16 25.6L0 10.237l4.575-3.838L16 17.924 27.425 6.399 32 10.237 16 25.6z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </tbody> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
